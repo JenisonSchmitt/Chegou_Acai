@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chegou Açaí</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="images/iconelogo.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" method="post" action="php/cliente/login.php">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="button">Entrar</button>
+        </form>
+        <div class="footer">
+            <p><a href="redsenha.html">Esqueci a senha</a></p>
+            <p>Não tem uma conta? <a href="criarconta.html">Registre-se</a></p>
+        </div>
+    </div>
+</body>
+</html>

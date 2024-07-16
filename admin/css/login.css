@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../../images/banner2.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.login-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #581b98;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #581b98;
+    outline: none;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #581b98;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #3e1367;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #581b98;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #3e1367;
+}
+
+
+	/* Estilo para o popup do SweetAlert */
+.swal2-popup {
+    background-color: #581b98; /* Rosa claro */
+    border-radius: 10px;
+}
+
+/* Estilo para o título do popup */
+.swal2-title {
+    color: white; /* Roxo escuro */
+    font-size: 24px;
+}
+
+/* Estilo para o ícone do popup */
+.swal2-icon svg {
+    fill: #faee1c; /* Rosa escuro */
+    height: 48px;
+    width: 48px;
+}
+
+/* Estilo para o texto do popup */
+.swal2-content {
+    color: white; /* Roxo claro */
+    font-size: 18px;
+}
+
+/* Estilo para o botão de confirmação do popup */
+.swal2-confirm {
+    background-color: #faee1c; /* Amarelo escuro */
+    border: none;
+    border-radius: 5px;
+    color: #fffa9f; /* Amarelo claro */
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* Estilo para o botão de confirmação do popup quando focado */
+.swal2-confirm:focus {
+    box-shadow: 0 0 5px #fffa9f; /* Amarelo claro */
+}
+

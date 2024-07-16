@@ -1,0 +1,245 @@
+/* Estilos CSS personalizados */
+body {
+    background-color: #581b98;
+    padding-top: 20px;
+}
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.step-buttons {
+    text-align: right;
+}
+.step-content {
+    display: none;
+}
+.step-content.active {
+    display: block;
+}
+
+/* Estilos personalizados para as abas */
+.nav-tabs .nav-item .nav-link {
+    color: #581b98; /* Cor do texto */
+    background-color: white; /* Cor de fundo */
+    border-color: #9c1de7; /* Cor da borda */
+}
+.nav-tabs .nav-item .nav-link.active {
+    color: #f3558e; /* Cor do texto ativo */
+    background-color: rgb(233, 233, 233); /* Cor de fundo ativo */
+    border-color: #fa80ad; /* Cor da borda ativa */
+}
+
+
+/* Status da Barbearia */
+.statusBarbearia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: transform 0.4s ease, opacity 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    white-space: nowrap;
+    margin-top: 4em;
+}
+
+.statusBarbearia p {
+    margin: 0;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.statusBarbearia.aberto {
+    background-color: rgba(76, 175, 80, 0.9); /* Verde */
+    box-shadow: 0 8px 16px rgba(76, 175, 80, 0.5);
+}
+
+.statusBarbearia.fechado {
+    background-color: rgba(255, 25, 0, 0.9); /* Vermelho */
+    box-shadow: 0 8px 16px rgba(232, 48, 28, 0.5);
+}
+
+.statusBarbearia:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.statusBarbearia.aberto:hover {
+    background-color: rgba(56, 142, 60, 0.9);
+}
+
+.statusBarbearia.fechado:hover {
+    background-color: rgba(192, 57, 43, 0.9);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .nav-tabs .nav-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .statusBarbearia {
+        margin-top: 6em;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+    
+    .insertprod svg, .insertadc svg {
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .statusBarbearia {
+        margin-top: 10em;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+    
+    .insertprod svg, .insertadc svg {
+        width: 1em;
+        height: 1em;
+    }
+}
+
+
+.btn-editar-cliente, .btn-excluir-cliente {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-editar-cliente svg, .btn-excluir-cliente svg {
+    width: 1em;
+    height: 1em;
+}
+
+.btn-editar-produto, .btn-excluir-produto {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-editar-produto svg, .btn-excluir-produto svg {
+    width: 1em;
+    height: 1em;
+}
+
+.btn-editar-adicional, .btn-excluir-adicional{
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-editar-adicional svg, .btn-excluir-adicional svg {
+    width: 1em;
+    height: 1em;
+}
+
+.btn-editar-pedido, .btn-excluir-pedido {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-editar-pedido svg, .btn-excluir-pedido svg {
+    width: 1em;
+    height: 1em;
+}
+
+
+.insertprod, .insertprod {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.insertprod svg, .insertprod svg {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.insertadc, .insertadc {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.insertadc svg, .insertadc svg {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.btn-whatsapp, .btn-whatsapp {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-whatsapp svg, .btn-whatsapp svg {
+    width: 1em;
+    height: 1em;
+}
+
+.btn-maps, .btn-maps {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-maps svg, .btn-maps svg {
+    width: 1em;
+    height: 1em;
+}
+
+/* CSS para a classe .novo-pedido */
+.novo-pedido {
+    animation: highlight 5s linear infinite;
+}
+
+/* Definição das variáveis de cor */
+:root {
+    --cor1: #fa80ad;
+    --cor2: #fffa9f;
+    --cor3: #9c1de7;
+}
+
+/* Animação para alternar as cores */
+@keyframes highlight {
+    0%, 100% { background-color: var(--cor1); }
+    33.33% { background-color: var(--cor2); }
+    66.66% { background-color: var(--cor3); }
+}
+
+

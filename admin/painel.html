@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" href="../images/iconelogo.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/produto/adicionais.js"></script>
+    <script src="js/produto/produtos.js"></script>
+    <script src="js/cliente/clientes.js"></script>
+    <script src="js/pedido/pedidos.js"></script>
+    <script src="js/funcionamentoadmin.js"></script>
+    <script src="js/inserts.js"></script>
+    <script src="js/login/check_login.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center mb-4">Painel Administrativo - Chegou Açaí</h2>
+    <!-- Status da Barbearia -->
+    <div class="center">
+        <br><br>
+        <div id="statusBarbearia" class="statusBarbearia"></div>
+        <br><br>
+    </div>
+    <!-- Abas de navegação -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#step-pedido" id="link-pedido">Pedidos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#step-cliente" id="link-cliente">Clientes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#step-produto" id="link-produto">Produtos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#step-adicional" id="link-adicional">Adicionais</a>
+        </li>
+    </ul>
+
+    <!-- Conteúdo das abas -->
+    <div class="tab-content mt-4">
+        <!-- Conteúdo do Pedido -->
+        <div id="step-pedido" class="tab-pane fade show active">
+            <h3>Gerenciamento de Pedidos</h3>
+            <div id="tabela-pedidos" class="table-responsive"></div>
+        </div>
+
+        <!-- Conteúdo do Cliente -->
+        <div id="step-cliente" class="tab-pane fade">
+            <h3>Gerenciamento de Clientes</h3>
+            <div id="tabela-clientes" class="table-responsive"></div>
+        </div>
+
+        <!-- Conteúdo do Produto -->
+        <div id="step-produto" class="tab-pane fade">
+            <h3>Gerenciamento de Produtos</h3>
+            <button class="insertprod" id="insertprod">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="#581b98" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"/>
+                </svg>
+            </button>
+            <div id="tabela-produtos" class="table-responsive"></div>
+        </div>
+
+        <!-- Conteúdo do Adicional -->
+        <div id="step-adicional" class="tab-pane fade">
+            <h3>Gerenciamento de Adicionais</h3>
+            <button class="insertadc" id="insertadc">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="#581b98" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"/>
+                </svg>
+            </button>
+            <div id="tabela-adicionais" class="table-responsive"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

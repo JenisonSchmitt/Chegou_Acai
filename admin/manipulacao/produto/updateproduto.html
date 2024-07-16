@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Produto - Chegou Açaí</title>
+    <link rel="stylesheet" href="../../../css/criarconta.css">
+    <link rel="icon" href="../../images/iconelogo.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/produto/updateproduto.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <h2>Atualizar Produto</h2>
+        <form class="login-form" method="post" action="../../php/produto/update_produto.php">
+            <input type="hidden" id="produtoId" name="id"> <!-- Campo hidden para enviar o ID do produto -->
+            <div class="form-group">
+                <label for="nome">Nome do Produto</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome do produto" required>
+            </div>
+            <div class="form-group">
+                <label for="desc1">Descrição 1</label>
+                <input class="form-control" type="text" id="desc1" name="desc1" placeholder="O mais saboroso da região" required>
+            </div>
+            <div class="form-group">
+                <label for="desc2">Descrição 2</label>
+                <input class="form-control" type="text" id="desc2" name="desc2" placeholder="Venha se deliciar com o nosso açaí" required>
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input class="form-control" type="text" id="valor" name="valor" placeholder="R$ 20.00" required>
+            </div>
+            <div class="form-group">
+                <label for="adicional">Adicional</label>
+                <input class="form-control" type="number" id="adicional" name="adicional" placeholder="2" required>
+            </div>
+            <input class="button" type="submit" value="Atualizar Produto">
+        </form>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>

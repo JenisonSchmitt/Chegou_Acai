@@ -1,0 +1,369 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #581b98;
+}
+
+.cart-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item img {
+    max-width: 100px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.cart-item h3 {
+    margin-top: 0;
+    color: #581b98;
+}
+
+.cart-item p {
+    margin: 0;
+    color: #777;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-total span {
+    font-weight: bold;
+    color: #581b98;
+    font-size: 1.2em;
+}
+
+.btn {
+    background-color: #581b98;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4a1680;
+}
+
+.additional {
+    padding-left: 20px; /* Adiciona espaço à direita dos adicionais */
+    text-align: center; /* Centraliza o texto dos adicionais */
+}
+
+
+	/* Estilo para o popup do SweetAlert */
+.swal2-popup {
+    background-color: #581b98; /* Rosa claro */
+    border-radius: 10px;
+}
+
+/* Estilo para o título do popup */
+.swal2-title {
+    color: white; /* Roxo escuro */
+    font-size: 24px;
+}
+
+.swal2-text {
+    color: white; /* Roxo escuro */
+    font-size: 10px;
+}
+
+/* Estilo para o ícone do popup */
+.swal2-icon svg {
+    fill: #faee1c; /* Rosa escuro */
+    height: 48px;
+    width: 48px;
+}
+
+/* Estilo para o texto do popup */
+.swal2-content {
+    color: white;
+    font-size: 18px;
+}
+
+/* Estilo para o botão de confirmação do popup */
+.swal2-confirm {
+    background-color: #faee1c; /* Amarelo escuro */
+    border: none;
+    border-radius: 5px;
+    color: #fffa9f; /* Amarelo claro */
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* Estilo para o botão de confirmação do popup quando focado */
+.swal2-confirm:focus {
+    box-shadow: 0 0 5px #fffa9f; /* Amarelo claro */
+}
+
+.text-white {
+    color: white !important; /* Define a cor do texto como branco */
+}
+
+
+
+
+
+
+/* Estilos para os elementos do carrinho */
+.pedido-container {
+    border: 2px solid #fa80ad;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto 20px;
+    max-width: 600px;
+    background-color: white;
+}
+
+@media (max-width: 767px) {
+    .pedido-container {
+        max-width: 90%;
+        border-width: 1px;
+        padding: 8px;
+    }
+}
+
+.pedido-titulo {
+    color: #9c1de7; /* Cor roxa para o título do pedido */
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.produto-info {
+    display: flex;
+    align-items: center;
+    background-color: #581b98; /* Cor de fundo */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 30px; /* Espaçamento interno */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra */
+    text-align: left; /* Alinhamento do texto */
+    flex: 1 1 calc(100%);
+    max-width: calc(100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(10px); /* Filtro de desfoque de fundo */
+
+    /* Ajuste para telas menores que 768px (tablets e celulares na orientação vertical) */
+    @media (max-width: 767px) {
+        margin-left: 0;
+        margin-bottom: 20px;
+        max-width: 100%; /* Ocupa a largura máxima do dispositivo */
+    }
+}
+
+.produto-imagem {
+    max-width: 80px; /* Largura máxima da imagem do produto */
+    max-height: 80px; /* Altura máxima da imagem do produto */
+    border-radius: 5px; /* Borda arredondada */
+    margin-right: 15px; /* Espaçamento à direita */
+}
+
+.produto-texto {
+    flex: 1;
+}
+
+.produto-nome {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.produto-preco {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.produto-adicional {
+    color: yellow;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.produto-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombras mais intensas no hover */
+    background-color: #9c1de7; /* Ajuste para opacidade maior no hover */
+
+    /* Ajuste para telas menores que 768px (tablets e celulares na orientação vertical) */
+    @media (max-width: 767px) {
+        transform: translateY(-10px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombras mais suaves no hover */
+    }
+}
+
+.adicionais-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Cor de fundo */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 30px; /* Espaçamento interno */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra */
+    text-align: left; /* Alinhamento do texto */
+    flex: 1 1 calc(100%);
+    max-width: calc(100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(10px); /* Filtro de desfoque de fundo */
+}
+
+.adicionais-container:hover {
+    transform: translateY(-10px);
+    background-color: #fafafa; /* Cor de fundo no hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+}
+
+.adicionais-titulo {
+    color: grey; /* Cor do título dos adicionais */
+    font-size: 14px; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento inferior */
+
+    /* Ajuste para telas menores que 768px (tablets e celulares na orientação vertical) */
+    @media (max-width: 767px) {
+        margin-right: 12em; /* Ajuste o valor conforme necessário */
+    }
+}
+
+.adicionais-lista {
+    list-style-type: none; /* Removi a marcação de lista padrão */
+    padding: 0; /* Removi o padding padrão da lista */
+    margin-right: 18em; /* Ajuste o valor conforme necessário */
+
+    /* Ajuste para telas menores que 768px (tablets e celulares na orientação vertical) */
+    @media (max-width: 767px) {
+        margin-right: 10em; /* Ajuste o valor conforme necessário */
+    }
+}
+
+.adicional-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Linha separadora entre os itens */
+    padding-bottom: 10px; /* Espaçamento inferior dos itens */
+}
+
+.adicional-info {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.adicional-imagem {
+    max-width: 50px; /* Largura máxima da imagem do adicional */
+    max-height: 50px; /* Altura máxima da imagem do adicional */
+    border-radius: 5px; /* Borda arredondada */
+    margin-right: 15px; /* Espaçamento à direita */
+}
+
+.adicional-texto {
+    flex: 1;
+}
+
+.adicional-texto h5 {
+    color: #581b98; /* Cor do título do texto do adicional */
+    font-size: 15px; /* Tamanho do título do texto do adicional */
+    margin-bottom: 5px; /* Espaçamento inferior do título do texto do adicional */
+}
+
+.adicional-texto p {
+    color: #581b98; /* Cor do texto do adicional */
+    font-size: 16px; /* Tamanho do texto do adicional */
+    margin-bottom: 0; /* Removi o espaçamento inferior do texto do adicional */
+}
+
+/* Estilo para o total do carrinho */
+#total-carrinho {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6a0dad; /* Cor roxa */
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2; /* Fundo cinza claro */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.excluir-pedido {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.right {
+    float: right; /* Alinha o botão à direita usando float */
+    /* ou */
+    /* text-align: right; */ /* Alinha o conteúdo interno do botão à direita */
+}
+
+.center {
+    text-align: center;
+    color: white; /* Inclua outras propriedades de estilo necessárias aqui */
+}
+
+.white{
+    color: white;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.custom-swal-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.custom-swal-button:hover {
+    transform: scale(1.05);
+}
+
+.custom-swal-button.pix {
+    background-color: #9c1de7;
+    color: white;
+}
+
+.custom-swal-button.cartao {
+    background-color: #9c1de7;
+    color: white;
+}
+
+.custom-swal-button.whatsapp {
+    background-color: #9c1de7;
+    color: white;
+}

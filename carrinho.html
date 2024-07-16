@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Carrinho - Chegou Açaí!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/carrinho.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="icon" href="images/iconelogo.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/login/login.js"></script>
+    <script src="js/login/check_login.js"></script>
+    <script src="js/funcionamento.js"></script>
+    <script src="js/carrinho/carrinho.js"></script>
+    <script src="js/carrinho/pagamento.js"></script>
+</head>
+<body class="homepage is-preload">
+    <div id="statusBarbearia" class="statusBarbearia" aria-live="polite"></div>
+    <br><br>
+    <div id="page-wrapper">
+        <section id="header">
+            <div class="container">
+                <h1 id="logo">Chegou Açaí!</h1>
+                <p>Não deixe para depois a felicidade que você pode ter agora!</p>
+            </div>
+        </section>
+    </div>
+    <div id="carrinho-container">
+        <br>
+        <h1>Carrinho de Pedidos</h1>
+        <br>
+        <div id="pedidos"></div>
+        <br>
+        <h3 class="center" id="total-carrinho1"></h3>
+        <h3 class="center" id="total-carrinho">Total: R$0.00</h3>
+    </div>
+    <div class="center buttons">
+        <button id="btn-finalizar-pedido" class="center button1F" onclick="finalizarPedido()">Finalizar pedido</button>
+    </div><br><br>
+
+    <section id="banner">
+        <div class="container">
+            <p>A vida pode ser mais bela <br><strong>acompanhada de açaí</strong>.<br /><br>
+        </div>
+    </section>
+    <section id="footer">
+        <div id="copyright" class="container">
+            <ul class="links">
+                <li>&copy; Desenvolvido por Jenison Schmitt. Todos os direitos Reservados.</li>
+            </ul>
+        </div>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Chegou Açaí!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/iconelogo.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/steps.js"></script>
+    <script src="js/funcionamento.js"></script>
+    <script src="js/principal/getinformacoes.js"></script>
+    <script src="js/principal/fazpedido.js"></script>
+</head>
+<body class="homepage is-preload">
+    <div id="navbar-wrapper">
+        <nav id="navbar">
+            <ul>
+                <li><a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#581b98" d="M12 21v-2h7V5h-7V3h7q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm-2-4l-1.375-1.45l2.55-2.55H3v-2h8.175l-2.55-2.55L10 7l5 5z"/></svg></a></li>
+                <li></li>
+                <li><a href="carrinho.html#carrinho"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="124" viewBox="0 0 24 24"><path fill="none" stroke="#581b98" d="M5.5 21a2 2 0 1 0 4 0m3 0a2 2 0 1 0 4 0M7 7.5h15.5v.25l-.239.283A16 16 0 0 0 18.5 18.34v.16h-13v-1.88c0-2.08-.066-4.158-.386-6.212C4.56 6.852 3.337 1.5 1 1.5"/></svg></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="statusBarbearia" class="statusBarbearia" aria-live="polite"></div>
+    <br><br>
+    <div id="page-wrapper">
+        <section id="header">
+            <div class="container">
+                <h1 id="logo">Chegou Açaí!</h1>
+                <p>Não deixe para depois a felicidade que você pode ter agora!</p>
+            </div>
+        </section>
+
+        <section id="step1" class="bg-personality_0 step">
+            <div class="container">
+                <div class="center">
+                    <br><br><h3><strong>1° passo: </strong>Escolha o tamanho!</h3>
+                    <div class="linha"></div>
+                </div> 
+                <section id="produtos-container" class="produtos-container">
+                    <div class="row aln-center">
+                        <!-- Produtos serão carregados dinamicamente aqui -->
+                    </div>
+                    <br><br>
+                </section>
+            </div>
+        </section>
+
+        <section id="step2" class="bg-personality_0 step" style="display: none;">
+            <div class="container">
+                <div class="center">
+                    <br><br><h3><strong>2° passo: </strong>Escolha seus adicionais!</h3>
+                    <div class="linha"></div>
+                </div> 
+                <section id="adicionais-container" class="adicionais-container">
+                    <!-- Adicionais serão carregados dinamicamente aqui -->
+                </section>
+            </div>
+            <div class= "center">
+                <br>
+                <button id="btn-finish2" class="swal-button swal2-styled">Finalizar Pedido</button>
+                <br><br>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

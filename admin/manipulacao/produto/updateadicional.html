@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Adicional - Chegou Açaí</title>
+    <link rel="stylesheet" href="../../../css/criarconta.css">
+    <link rel="icon" href="../../images/iconelogo.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/produto/updateadicional.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <h2>Atualizar Adicional</h2>
+        <form class="login-form" method="post" action="../../php/produto/update_adicional.php">
+            <input type="hidden" id="produtoId" name="id"> <!-- Campo hidden para enviar o ID do adicional -->
+            <div class="form-group">
+                <label for="nome">Nome do Adicional</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome do produto" required>
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input class="form-control" type="text" id="valor" name="valor" placeholder="R$ 2.00" required>
+            </div>
+            <input class="button" type="submit" value="Atualizar Adicional">
+        </form>
+    </div>
+</body>
+</html>

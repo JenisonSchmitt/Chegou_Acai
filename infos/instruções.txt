@@ -1,0 +1,27 @@
+-cores bases da empresa: preto, amarelo e roxo (ciano ou rosa)
+
+-artes produzidas (foto, logo, ícone, banner, papel de parede, etc):
+
+-produtos disponíveis: 
+	-açaí de 300, 500 e 750ml. 
+	-leite em pó, banana, manga, kiwi, morango, amendoin, paçoca, chocolate em gotas, leite condensado, gronola. 
+
+-funcionalidades mínimas (tela de produtos, tela de login (caso haja tela de login, quais informações o cliente deve repassar?), carrinho e etc):
+	- 1° tela de produtos + adicionais
+	- 2° tela de login
+	- 3° tela de carrinho
+
+-funcionalidade do pedido (Como você quer que seja o passo a passo do usuário para selecionar o pedido? Exemplo: 1° - escolhe tamanho, 2° - escolhe adicional, 3° - seleciona método de envio ou retirada)
+	- 1 - tamanho
+	- 2 - adicional
+	- 3 - login
+	- 4 - carrinho
+	- 5 - finalização
+
+-funcionalidades finais (métodos de pagamento, haverá a possibilidade de cupom de desconto? Haverá caixa de observação para o cliente colocar?)
+	- PAG: Pix, Local e Crédito (inifitypay)
+	- sem desconto
+	- caixa de obs
+	- Frente (vila moema, centro, oficinas, morrotes, dehon, Humaitá = 5) e (restante: 10)
+
+	Testeacai1234*

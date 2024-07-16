@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Chegou Açaí</title>
+    <link rel="stylesheet" href="css/criarconta.css">
+    <link rel="icon" href="images/iconelogo.ico" type="image/x-icon">
+    <script src="js/login/criarconta.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <h2>Criar Conta</h2>
+        <form class="login-form" method="post" onsubmit="return validarFormulario()" action="php/cliente/processa_cadastro.php">
+            <div class="form-group">
+                <label for="nome">Nome de Usuário</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome completo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input class="form-control" type="tel" id="telefone" name="telefone" placeholder="(99) 12345-6789" oninput="formatarTelefone(this)" required>
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input class="form-control" type="text" id="endereco" name="endereco" placeholder="Rua A" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número</label>
+                    <input class="form-control" type="text" id="numero" name="numero" placeholder="123" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento</label>
+                    <input class="form-control" type="text" id="complemento" name="complemento" placeholder="Apartamento 101">
+                </div>
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input class="form-control" type="text" id="bairro" name="bairro" placeholder="Centro" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input class="form-control" type="text" id="cidade" name="cidade" placeholder="Tubarão" required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input class="form-control" type="text" id="cep" name="cep" placeholder="12345678" maxlength="9" oninput="formatarCEP(this)" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input class="form-control" type="password" id="senha" name="senha" required>
+                <div id="senha_error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="senha_confirm">Confirme a Senha</label>
+                <input class="form-control" type="password" id="senha_confirm" name="senha_confirm" required>
+                <div id="senha_confirm_error" class="error-message"></div>
+            </div>
+            <input class="button" type="submit" value="Criar Conta">
+        </form>
+        <div class="footer">
+            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+        </div>
+    </div>
+</body>
+</html>
